@@ -30,9 +30,9 @@ spec:
           requests:
             cpu: 100m
             memory: 100Mi
-          volumeMounts:
-            - name: mongodb-storage
-              mountPath: /data/db  # MongoDB's data directory
+        volumeMounts:
+          - name: mongodb-storage
+            mountPath: /data/db  # MongoDB's data directory
       volumes:
         - name: mongodb-storage
           persistentVolumeClaim:
